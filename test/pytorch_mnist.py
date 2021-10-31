@@ -100,6 +100,11 @@ def train(epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
+        
+        # print out the reduced tensors
+        for name, parms in model.named_parameters():
+            print('-->name:', name, ' -->grad_requirs:', parms.requires_grad, ' -->grad_type:', type(parms), ' -->grad_size:', parms.size())
+
         if batch_idx % args.log_interval == 0:
             # Horovod: use train_sampler to determine the number of examples in
             # this worker's partition.
