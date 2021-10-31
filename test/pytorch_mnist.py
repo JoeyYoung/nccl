@@ -102,6 +102,9 @@ def train(epoch):
     # Horovod: set epoch to sampler for shuffling.
     train_sampler.set_epoch(epoch)
     for batch_idx, (data, target) in enumerate(train_loader):
+        time.sleep(10)
+        print("===== begin one interation step")
+
         if args.cuda:
             data, target = data.cuda(), target.cuda()
         optimizer.zero_grad()
@@ -109,8 +112,6 @@ def train(epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
 
-        time.sleep(5)
-        print("===== begin one optimization step")
         optimizer.step()
 
         if batch_idx % args.log_interval == 0:
