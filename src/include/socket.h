@@ -398,7 +398,7 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
     WARN("[CCP] Socekt.h: Set TCP CONGESTION failed");
     return ncclSystemError;
   }else{
-    INFO(NCCL_INIT, "[CCP] Socekt.h: Set TCP cong to CCP.")
+    INFO(NCCL_INIT, "[CCP] Socekt.h: Set TCP cong to CCP.");
   }
 
   const int one = 1;
