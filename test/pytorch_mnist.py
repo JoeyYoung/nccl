@@ -1,6 +1,7 @@
 import argparse
 import os
 from filelock import FileLock
+import time
 
 import torch.multiprocessing as mp
 import torch.nn as nn
@@ -107,6 +108,9 @@ def train(epoch):
         output = model(data)
         loss = F.nll_loss(output, target)
         loss.backward()
+
+        time.sleep(5)
+        print("===== begin one optimization step")
         optimizer.step()
 
         if batch_idx % args.log_interval == 0:
