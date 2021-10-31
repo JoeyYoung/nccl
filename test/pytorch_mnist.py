@@ -89,6 +89,14 @@ def train_mixed_precision(epoch, scaler):
                 100. * batch_idx / len(train_loader), loss.item(), scaler.get_scale()))
 
 def train(epoch):
+
+    # print out the reduced tensors
+    for name, parms in model.named_parameters():
+        print('-->name:', name, ' -->grad_requirs:', parms.requires_grad, ' -->grad_type:', type(parms), ' -->grad_size:', parms.size())
+
+    for param in model.parameters():
+        print(type(param), param.size())
+
     model.train()
     # Horovod: set epoch to sampler for shuffling.
     train_sampler.set_epoch(epoch)
@@ -100,10 +108,6 @@ def train(epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
-        
-        # print out the reduced tensors
-        for name, parms in model.named_parameters():
-            print('-->name:', name, ' -->grad_requirs:', parms.requires_grad, ' -->grad_type:', type(parms), ' -->grad_size:', parms.size())
 
         if batch_idx % args.log_interval == 0:
             # Horovod: use train_sampler to determine the number of examples in
