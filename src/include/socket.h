@@ -383,6 +383,24 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
     return ncclSystemError;
   }
 
+  // MLCC, set congestion control algorithm on socket
+  char buf[256];
+  socklen_t len;
+  len = sizeof(buf);
+  if (getsockopt(*fd, IPPROTO_TCP, TCP_CONGESTION, buf, &len) != 0){
+    WARN("[CCP] Socekt.h: Get TCP CONGESTION failed");
+    return ncclSystemError;
+  }
+
+  strcpy(buf, "ccp");
+  len = strlen(buf);
+  if (setsockopt(*fd, IPPROTO_TCP, TCP_CONGESTION, buf, len) != 0){
+    WARN("[CCP] Socekt.h: Set TCP CONGESTION failed");
+    return ncclSystemError;
+  }else{
+    INFO(NCCL_INIT, "[CCP] Socekt.h: Set TCP cong to CCP.")
+  }
+
   const int one = 1;
   SYSCHECK(setsockopt(*fd, IPPROTO_TCP, TCP_NODELAY, (char*)&one, sizeof(int)), "setsockopt");
 
