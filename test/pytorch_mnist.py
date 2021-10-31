@@ -91,10 +91,6 @@ def train_mixed_precision(epoch, scaler):
 
 def train(epoch):
 
-    # print out the reduced tensors
-    for name, parms in model.named_parameters():
-        print('-->name:', name, ' -->grad_requirs:', parms.requires_grad, ' -->grad_type:', type(parms), ' -->grad_size:', parms.size())
-
     for param in model.parameters():
         print(type(param), param.size())
 
@@ -102,8 +98,8 @@ def train(epoch):
     # Horovod: set epoch to sampler for shuffling.
     train_sampler.set_epoch(epoch)
     for batch_idx, (data, target) in enumerate(train_loader):
-        time.sleep(10)
         print("===== begin one interation step")
+        time.sleep(10)
 
         if args.cuda:
             data, target = data.cuda(), target.cuda()
