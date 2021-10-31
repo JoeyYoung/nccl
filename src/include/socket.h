@@ -383,7 +383,7 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
     return ncclSystemError;
   }
 
-  // MLCC, set congestion control algorithm on socket
+  // ncclMLCC, set congestion control algorithm on socket
   char buf[256];
   socklen_t len;
   len = sizeof(buf);
