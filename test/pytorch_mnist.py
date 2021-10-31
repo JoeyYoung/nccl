@@ -38,7 +38,8 @@ parser.add_argument('--gradient-predivide-factor', type=float, default=1.0,
                     help='apply gradient predivide factor in optimizer (default: 1.0)')
 parser.add_argument('--data-dir',
                     help='location of the training dataset in the local filesystem (will be downloaded if needed)')
-
+parser.add_argument('--iterations', type=int, default=11,
+                    help='default > 10 will train normally, set <= 10 to log each iteration')
 
 class Net(nn.Module):
     def __init__(self):
@@ -105,7 +106,9 @@ def train(epoch):
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
                 epoch, batch_idx * len(data), len(train_sampler),
                 100. * batch_idx / len(train_loader), loss.item()))
-
+        if args.iterations <= 10 and (batch_idx + 1) == args.iterations:
+            return
+        
 
 def metric_average(val, name):
     tensor = torch.tensor(val)
@@ -235,4 +238,4 @@ if __name__ == '__main__':
         else:
             train(epoch)
         # Keep test in full precision since computation is relatively light.
-        test()
+        # test()
