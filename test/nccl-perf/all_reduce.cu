@@ -1,3 +1,7 @@
+//
+// Example 2: One Device Per Process Or Thread for all reduce
+//
+
 #include <stdio.h>
 #include "cuda_runtime.h"
 #include "nccl.h"
