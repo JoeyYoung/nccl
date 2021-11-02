@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
     // initializing NCCL
     NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
 
-    printf("Ready to do all_reduce, sleep 5 seconds...");
+    printf(" ==================> Ready to do all_reduce, sleep 5 seconds...\n");
     sleep(5);
 
     // communicating using NCCL
