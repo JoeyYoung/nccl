@@ -14,9 +14,6 @@
 namespace {
   template<typename T, typename RedOp, typename Proto>
   __device__ __forceinline__ void runRing(ncclWorkElem *args) {
-    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ncclShmem.channel.ring->index);
-    hello_world();
-
     const int tid = threadIdx.x;
     const int nthreads = args->nThreads;
     const int bid = args->coll.bid;
@@ -27,6 +24,9 @@ namespace {
     const int nranks = ncclShmem.comm.nRanks;
     const ssize_t loopSize = nChannels*nranks*chunkSize;
     const ssize_t size = args->coll.count;
+
+    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ringIx);
+    hello_world();
 
     int minChunkSize;
     if (Proto::Id == NCCL_PROTO_LL)
@@ -84,7 +84,7 @@ namespace {
       nelem = min(realChunkSize, size-offset);
       prims.directRecvReduceCopySend(offset, offset, offset, nelem, /*postOp=*/true);
 
-      printf("[ring idex: %d]Complete scatter k-1 steps, ready to gather k-1 steps", &ring->index);
+      printf("[ring idex: %d]Complete scatter k-1 steps, ready to gather k-1 steps", &ringIx);
 
       // k-2 steps: copy to next GPU
       for (int j=1; j<nranks-1; ++j) {
