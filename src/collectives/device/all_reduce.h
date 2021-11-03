@@ -22,7 +22,7 @@ namespace {
     const ssize_t loopSize = nChannels*nranks*chunkSize;
     const ssize_t size = args->coll.count;
 
-    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ringIx);
+    printf("[ring idex: %d] Funciton Call: runRing for on tensor in all_reduce.\n", ringIx);
 
     int minChunkSize;
     if (Proto::Id == NCCL_PROTO_LL)
@@ -80,7 +80,7 @@ namespace {
       nelem = min(realChunkSize, size-offset);
       prims.directRecvReduceCopySend(offset, offset, offset, nelem, /*postOp=*/true);
 
-      printf("[ring idex: %d]Complete scatter k-1 steps, ready to gather k-1 steps", &ringIx);
+      printf("[ring idex: %d] Complete scatter k-1 steps, ready to gather k-1 steps.\n", ringIx);
 
       // k-2 steps: copy to next GPU
       for (int j=1; j<nranks-1; ++j) {
