@@ -8,9 +8,6 @@
 #include "collectives.h"
 #include "primitives.h"
 
-#include "debug.h"
-#include "mlcc_comm.h"
-
 namespace {
   template<typename T, typename RedOp, typename Proto>
   __device__ __forceinline__ void runRing(ncclWorkElem *args) {
@@ -26,7 +23,6 @@ namespace {
     const ssize_t size = args->coll.count;
 
     printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ringIx);
-    hello_world();
 
     int minChunkSize;
     if (Proto::Id == NCCL_PROTO_LL)
