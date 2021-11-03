@@ -8,9 +8,15 @@
 #include "collectives.h"
 #include "primitives.h"
 
+#include "debug.h"
+#include "mlcc_comm.h"
+
 namespace {
   template<typename T, typename RedOp, typename Proto>
   __device__ __forceinline__ void runRing(ncclWorkElem *args) {
+    INFO(NCCL_COLL, "Funciton Call: runRing for on tensor in all_reduce.");
+    hello_world();
+
     const int tid = threadIdx.x;
     const int nthreads = args->nThreads;
     const int bid = args->coll.bid;
@@ -77,6 +83,8 @@ namespace {
       offset = calcOffset(chunk);
       nelem = min(realChunkSize, size-offset);
       prims.directRecvReduceCopySend(offset, offset, offset, nelem, /*postOp=*/true);
+
+      INFO(NCCL_COLL, "Complete scatter k-1 steps, ready to gather k-1 steps".);
 
       // k-2 steps: copy to next GPU
       for (int j=1; j<nranks-1; ++j) {
