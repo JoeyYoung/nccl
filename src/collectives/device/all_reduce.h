@@ -14,7 +14,7 @@
 namespace {
   template<typename T, typename RedOp, typename Proto>
   __device__ __forceinline__ void runRing(ncclWorkElem *args) {
-    INFO(NCCL_COLL, "Funciton Call: runRing for on tensor in all_reduce.");
+    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ring->index);
     hello_world();
 
     const int tid = threadIdx.x;
@@ -84,7 +84,7 @@ namespace {
       nelem = min(realChunkSize, size-offset);
       prims.directRecvReduceCopySend(offset, offset, offset, nelem, /*postOp=*/true);
 
-      INFO(NCCL_COLL, "Complete scatter k-1 steps, ready to gather k-1 steps".);
+      printf("[ring idex: %d]Complete scatter k-1 steps, ready to gather k-1 steps", &ring->index);
 
       // k-2 steps: copy to next GPU
       for (int j=1; j<nranks-1; ++j) {
