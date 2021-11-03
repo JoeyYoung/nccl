@@ -14,7 +14,7 @@
 namespace {
   template<typename T, typename RedOp, typename Proto>
   __device__ __forceinline__ void runRing(ncclWorkElem *args) {
-    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ring->index);
+    printf("[ring idex: %d]Funciton Call: runRing for on tensor in all_reduce.", &ncclShmem.channel.ring->index);
     hello_world();
 
     const int tid = threadIdx.x;
