@@ -19,9 +19,12 @@ ncclResult_t ncclAllReduce(const void* sendbuff, void* recvbuff, size_t count,
   /*
     ncclMLCC, regard this transmission as the scheduling unit:
       judge whether the transmission needs to cross machines;
-      fetch scheule from ccp agent;
-      send extra payload to switch process;
-      signal to show which transmission is to be controlled;
+        open shared memory with ccpAgent:
+            - singal to show which transmission is to be controlled;
+        [ccpagent: send switch init scheudle, apply]
+        [time slot: agent fetch info from swtich, reshcedule, apply]
+      New tensor:
+        continue ...
   */ 
   
   printf("one ncclAllReduce is trigged, ready to do ncclEnqueueCheck(&info).\n");
