@@ -202,6 +202,8 @@ ncclResult_t netRecvSetup(struct ncclComm* comm, struct ncclTopoGraph* graph, st
 }
 
 ncclResult_t netSendConnect(struct ncclComm* comm, struct ncclConnect* connectInfo, int nranks, int rank, struct ncclConnector* send) {
+  printf("netSendConnect\n");
+  
   // Setup device pointers
   struct netSendResources* resources = (struct netSendResources*)send->transportResources;
   struct netConnectInfo* info = (struct netConnectInfo*)connectInfo;

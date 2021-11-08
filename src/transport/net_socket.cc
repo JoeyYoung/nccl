@@ -303,6 +303,7 @@ ncclResult_t ncclSocketListen(int dev, void* opaqueHandle, void** listenComm) {
 }
 
 ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
+  printf("ncclSocketConnect\n");
   if (dev < 0) { // data transfer socket is based on specified dev
     return ncclInternalError;
   }
@@ -320,6 +321,7 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
   }
   *sendComm = comm;
   comm->addr = handle->connectAddr;
+
   return ncclSuccess;
 }
 

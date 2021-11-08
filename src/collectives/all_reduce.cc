@@ -7,6 +7,13 @@
 #include "enqueue.h"
 #include "mlcc.h"
 
+void checkRankIndex(ncclComm* comm){
+  // we only use one channel for each connection
+  int myRank = comm->channels[0].ring.index;
+  int nextRank = comm->channels[0].ring.next;
+  printf("[all_reduce.cc] One tensor will be sent from rank %d (ip:%s) to rank %d (ip: %s) with socket fd\n", myRank, myRankIP, nextRank, nextRankIP);
+}
+
 NCCL_API(ncclResult_t, ncclAllReduce, const void* sendbuff, void* recvbuff, size_t count,
     ncclDataType_t datatype, ncclRedOp_t op, ncclComm* comm, cudaStream_t stream);
 ncclResult_t ncclAllReduce(const void* sendbuff, void* recvbuff, size_t count,
@@ -25,10 +32,11 @@ ncclResult_t ncclAllReduce(const void* sendbuff, void* recvbuff, size_t count,
         [time slot: agent fetch info from swtich, reshcedule, apply]
       New tensor:
         continue ...
-  */ 
-  
-  printf("one ncclAllReduce is trigged, ready to do ncclEnqueueCheck(&info).\n");
-  hello_world();
+  */
+
+  // Judge whether this transmission cross machines
+  // Make it Asyn, since only ncclSocketConnect not called at very first
+  checkRankIndex(comm);
 
   return ncclEnqueueCheck(&info);
 }
