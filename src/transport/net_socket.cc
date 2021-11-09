@@ -16,10 +16,10 @@
 #include <limits.h>
 #include <fcntl.h>
 
-#include "mlcc.h"
+// #include "mlcc.h"
 
-char* nextRankIP;
-char* myRankIP;
+// char* nextRankIP;
+// char* myRankIP;
 
 /* Init functions */
 static int ncclNetIfs = -1;
@@ -306,7 +306,7 @@ ncclResult_t ncclSocketListen(int dev, void* opaqueHandle, void** listenComm) {
   *listenComm = comm;
 
   // ncclMLCC, store ip of my rank
-  myRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
+  // myRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
 
   return ncclSuccess;
 }
@@ -332,7 +332,7 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
   comm->addr = handle->connectAddr;
 
   // ncclMLCC, store ip of next rank
-  nextRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
+  // nextRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
 
   return ncclSuccess;
 }

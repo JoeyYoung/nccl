@@ -13,6 +13,11 @@
 #include <unistd.h>
 #include <sys/types.h>
 
+#include "mlcc.h"
+
+char* nextRankIP;
+char* myRankIP;
+
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
 static union socketAddress bootstrapNetIfAddr;
@@ -388,6 +393,10 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   NCCLCHECK(bootstrapAllGather(state, state->peerAllocAddresses, sizeof(union socketAddress)));
 
   TRACE(NCCL_INIT, "rank %d nranks %d - DONE", rank, nranks);
+
+  //ncclMLCC
+  nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
+  myRankIP = inet_ntoa(state->extRingRecvAddr.sin.sin_addr);
 
   return ncclSuccess;
 }
