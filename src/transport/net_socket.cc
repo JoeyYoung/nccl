@@ -322,7 +322,7 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
   *sendComm = comm;
   comm->addr = handle->connectAddr;
 
-  printf("The socket fd obtained in ncclSocketConnect is %d\n", comm->fds[0]);
+  printf("New: The socket fd obtained in ncclSocketConnect is %d\n", comm->ctrlFd);
   printf("The remote address obtained: %s\n", inet_ntoa(handle->connectAddr.sin.sin_addr));
 
   return ncclSuccess;
