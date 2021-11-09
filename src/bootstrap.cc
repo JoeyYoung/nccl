@@ -401,28 +401,14 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
 
   //ncclMLCC
   char* myip = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
-  printf("myip1: %s\n", myip);
+  myRankIP = (char*)malloc(sizeof(char) * strlen(myip));
+  strcpy(myRankIP, myip);
 
   char* nextip = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
-
-  printf("myip2: %s\n", myip);
-
-  myRankIP = (char*)malloc(sizeof(char) * (strlen(myip)+10));
-  nextRankIP = (char*)malloc(sizeof(char) * (strlen(nextip)+10));
-
-  strcpy(myRankIP, myip);
+  nextRankIP = (char*)malloc(sizeof(char) * strlen(nextip));
   strcpy(nextRankIP, nextip);
 
-  printf("myrankip: %s\n", myRankIP);
-
-  char tail[5];
-  sprintf(tail, "%d", rank);
-  strcat(myRankIP, tail);
-  strcat(nextRankIP, tail);
   printf("extern var: %s, %s\n", myRankIP, nextRankIP);
-
-  // nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
-  // myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
 
   return ncclSuccess;
 }
