@@ -2,64 +2,68 @@ Filtering local host names.
 Remote host found: 202.45.128.233
 Checking ssh on all remote hosts.
 SSH was successful into all the remote hosts.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Bootstrap : Using eno3:202.45.128.232<0>
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.232<0>
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Using network Socket
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Bootstrap : Using eno3:202.45.128.232<0>
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.232<0>
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Using network Socket
 [1,0]<stdout>:NCCL version 2.11.4+cuda10.2
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Bootstrap : Using eno3:202.45.128.233<0>
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.233<0>
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Using network Socket
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Bootstrap : Using eno3:202.45.128.232<0>
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.232<0>
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Using network Socket
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Bootstrap : Using eno3:202.45.128.233<0>
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58451 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58451 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.233<0>
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Using network Socket
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58451 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58451 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Bootstrap : Using eno3:202.45.128.233<0>
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Bootstrap : Using eno3:202.45.128.233<0>
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.233<0>
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Using network Socket
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.233<0>
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Using network Socket
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Bootstrap : Using eno3:202.45.128.232<0>
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eno3
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_SOCKET_IFNAME set to eno3
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NET/Socket : Using [0]eno3:202.45.128.232<0>
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Using network Socket
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:27124 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:27124 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:27124 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:27124 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
 [1,1]<stdout>:[bootstrap.cc: rank 1 init done]
 [1,1]<stdout>:sendaddr 202.45.128.233
 [1,1]<stdout>:recvdaddr 202.45.128.232
 [1,1]<stdout>:bootstrap 202.45.128.232
+[1,1]<stdout>:myip: 202.45.128.233
+[1,1]<stdout>:myrankip: 202.45.128.233
 [1,1]<stdout>:extern var: 202.45.128.2331, 202.45.128.2331
 [1,0]<stdout>:[bootstrap.cc: rank 0 init done]
 [1,0]<stdout>:sendaddr 202.45.128.232
 [1,0]<stdout>:recvdaddr 202.45.128.233
 [1,0]<stdout>:bootstrap 202.45.128.232
+[1,0]<stdout>:myip: 202.45.128.232
+[1,0]<stdout>:myrankip: 202.45.128.232
 [1,0]<stdout>:extern var: 202.45.128.2320, 202.45.128.2320
 [1,3]<stdout>:[bootstrap.cc: rank 3 init done]
 [1,3]<stdout>:sendaddr 202.45.128.232
@@ -71,168 +75,152 @@ SSH was successful into all the remote hosts.
 [1,2]<stdout>:recvdaddr 202.45.128.232
 [1,2]<stdout>:bootstrap 202.45.128.233
 [1,2]<stdout>:extern var: 202.45.128.2332, 202.45.128.2332
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Trees [0] 3/-1/-1->2->0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Setting affinity for GPU 0 to 5555,55555555,55555555
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Channel 00/01 :    0   1   2   3
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Trees [0] 1/2/-1->0->-1
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Setting affinity for GPU 0 to 5555,55555555,55555555
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Trees [0] -1/-1/-1->1->0
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Setting affinity for GPU 1 to 5555,55555555,55555555
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Trees [0] -1/-1/-1->3->2
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Setting affinity for GPU 1 to 5555,55555555,55555555
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Channel 00 : 3[3b000] -> 0[18000] [receive] via NET/Socket/0
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_NSOCKS_PERTHREAD set by environment to 1.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Channel 00 : 0[18000] -> 1[3b000] via P2P/IPC
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Channel 00 : 1[3b000] -> 2[18000] [send] via NET/Socket/0
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Channel 00 : 1[3b000] -> 2[18000] [receive] via NET/Socket/0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_NSOCKS_PERTHREAD set by environment to 1.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Channel 00 : 2[18000] -> 3[3b000] via P2P/IPC
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:[net_socket.cc] ncclSocketConnect
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Connected all rings
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Channel 00 : 1[3b000] -> 0[18000] via P2P/IPC
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Channel 00 : 3[3b000] -> 0[18000] [send] via NET/Socket/0
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Connected all rings
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Trees [0] 3/-1/-1->2->0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Setting affinity for GPU 0 to 5555,55555555,55555555
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Trees [0] -1/-1/-1->1->0
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Setting affinity for GPU 1 to 5555,55555555,55555555
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Channel 00/01 :    0   1   2   3
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Trees [0] 1/2/-1->0->-1
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Setting affinity for GPU 0 to 5555,55555555,55555555
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Trees [0] -1/-1/-1->3->2
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Setting affinity for GPU 1 to 5555,55555555,55555555
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Channel 00 : 1[3b000] -> 2[18000] [receive] via NET/Socket/0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_NSOCKS_PERTHREAD set by environment to 1.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Channel 00 : 2[18000] -> 3[3b000] via P2P/IPC
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Channel 00 : 3[3b000] -> 0[18000] [send] via NET/Socket/0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Channel 00 : 3[3b000] -> 0[18000] [receive] via NET/Socket/0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_NSOCKS_PERTHREAD set by environment to 1.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Channel 00 : 0[18000] -> 1[3b000] via P2P/IPC
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
 [1,3]<stdout>:[net_socket.cc] ncclSocketConnect
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Connected all rings
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Connected all rings
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Channel 00 : 3[3b000] -> 2[18000] via P2P/IPC
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Channel 00 : 0[18000] -> 2[18000] [receive] via NET/Socket/0
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Channel 00 : 2[18000] -> 0[18000] [receive] via NET/Socket/0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Channel 00 : 2[18000] -> 0[18000] [send] via NET/Socket/0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Channel 00 : 0[18000] -> 2[18000] [send] via NET/Socket/0
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Connected all rings
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Channel 00 : 3[3b000] -> 2[18000] via P2P/IPC
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Channel 00 : 1[3b000] -> 2[18000] [send] via NET/Socket/0
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:[net_socket.cc] ncclSocketConnect
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Connected all rings
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Connected all rings
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Connected all rings
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Channel 00 : 1[3b000] -> 0[18000] via P2P/IPC
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Channel 00 : 2[18000] -> 0[18000] [receive] via NET/Socket/0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Channel 00 : 0[18000] -> 2[18000] [receive] via NET/Socket/0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Channel 00 : 0[18000] -> 2[18000] [send] via NET/Socket/0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Channel 00 : 2[18000] -> 0[18000] [send] via NET/Socket/0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
 [1,0]<stdout>:[net_socket.cc] ncclSocketConnect
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
 [1,2]<stdout>:[net_socket.cc] ncclSocketConnect
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Connected all trees
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_PROTO set by environment to SIMPLE
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO NCCL_ALGO set by environment to RING
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Connected all trees
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_PROTO set by environment to SIMPLE
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO NCCL_ALGO set by environment to RING
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO comm 0x7f900c323d90 rank 0 nranks 4 cudaDev 0 busId 18000 - Init COMPLETE
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO comm 0x7fcc4c31a140 rank 1 nranks 4 cudaDev 1 busId 3b000 - Init COMPLETE
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Connected all trees
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_PROTO set by environment to SIMPLE
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO NCCL_ALGO set by environment to RING
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Connected all trees
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_PROTO set by environment to SIMPLE
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO NCCL_ALGO set by environment to RING
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO comm 0x7f4868322b40 rank 3 nranks 4 cudaDev 1 busId 3b000 - Init COMPLETE
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO comm 0x7fc9d031a6d0 rank 2 nranks 4 cudaDev 0 busId 18000 - Init COMPLETE
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fcbc6a00400 recvbuff 0x7fcbc6a00400 count 40 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada00400 recvbuff 0x7f8fada00400 count 40 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Launch mode Parallel
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a00400 recvbuff 0x7f4817a00400 count 40 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fc942a00400 recvbuff 0x7fc942a00400 count 40 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 1 sendbuff 0x7fc942a00000 recvbuff 0x7fc942a00000 count 1000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada00000 recvbuff 0x7f8fada00000 count 1000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 2 sendbuff 0x7fc942a05600 recvbuff 0x7fc942a05600 count 80 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada05600 recvbuff 0x7f8fada05600 count 80 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 3 sendbuff 0x7fc942a00600 recvbuff 0x7fc942a00600 count 20000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada00600 recvbuff 0x7f8fada00600 count 20000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 4 sendbuff 0x7fc942a15200 recvbuff 0x7fc942a15200 count 200 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada15200 recvbuff 0x7f8fada15200 count 200 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a00000 recvbuff 0x7f4817a00000 count 1000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada05800 recvbuff 0x7f8fada05800 count 64000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 5 sendbuff 0x7fc942a05800 recvbuff 0x7fc942a05800 count 64000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada15c00 recvbuff 0x7f8fada15c00 count 40 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a05600 recvbuff 0x7f4817a05600 count 80 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada15400 recvbuff 0x7f8fada15400 count 2000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 6 sendbuff 0x7fc942a15c00 recvbuff 0x7fc942a15c00 count 40 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a00600 recvbuff 0x7f4817a00600 count 20000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 7 sendbuff 0x7fc942a15400 recvbuff 0x7fc942a15400 count 2000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a15200 recvbuff 0x7f4817a15200 count 200 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a05800 recvbuff 0x7f4817a05800 count 64000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a15c00 recvbuff 0x7f4817a15c00 count 40 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a15400 recvbuff 0x7f4817a15400 count 2000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 1 sendbuff 0x7fcbc6a00000 recvbuff 0x7fcbc6a00000 count 1000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 2 sendbuff 0x7fcbc6a05600 recvbuff 0x7fcbc6a05600 count 80 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 3 sendbuff 0x7fcbc6a00600 recvbuff 0x7fcbc6a00600 count 20000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 4 sendbuff 0x7fcbc6a15200 recvbuff 0x7fcbc6a15200 count 200 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 5 sendbuff 0x7fcbc6a05800 recvbuff 0x7fcbc6a05800 count 64000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 6 sendbuff 0x7fcbc6a15c00 recvbuff 0x7fcbc6a15c00 count 40 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 7 sendbuff 0x7fcbc6a15400 recvbuff 0x7fcbc6a15400 count 2000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada2bc00 recvbuff 0x7f8fada2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada2c000 recvbuff 0x7f8fada2c000 count 40 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 8 sendbuff 0x7fcbc6a2bc00 recvbuff 0x7fcbc6a2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount 9 sendbuff 0x7fcbc6a2c000 recvbuff 0x7fcbc6a2c000 count 40 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada2c200 recvbuff 0x7f8fada2c200 count 20000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount a sendbuff 0x7fcbc6a2c200 recvbuff 0x7fcbc6a2c200 count 20000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada31200 recvbuff 0x7f8fada31200 count 80 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount b sendbuff 0x7fcbc6a31200 recvbuff 0x7fcbc6a31200 count 80 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount c sendbuff 0x7fcbc6a31400 recvbuff 0x7fcbc6a31400 count 64000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada31400 recvbuff 0x7f8fada31400 count 64000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 8 sendbuff 0x7fc942a2bc00 recvbuff 0x7fc942a2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount 9 sendbuff 0x7fc942a2c000 recvbuff 0x7fc942a2c000 count 40 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount d sendbuff 0x7fcbc6a40e00 recvbuff 0x7fcbc6a40e00 count 200 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada40e00 recvbuff 0x7f8fada40e00 count 200 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a2bc00 recvbuff 0x7f4817a2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a2c000 recvbuff 0x7f4817a2c000 count 40 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount e sendbuff 0x7fcbc6a41000 recvbuff 0x7fcbc6a41000 count 2000 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada41000 recvbuff 0x7f8fada41000 count 2000 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a2c200 recvbuff 0x7f4817a2c200 count 20000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Broadcast: opCount f sendbuff 0x7fcbc6a41800 recvbuff 0x7fcbc6a41800 count 40 datatype 0 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f8fada41800 recvbuff 0x7f8fada41800 count 40 datatype 0 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount a sendbuff 0x7fc942a2c200 recvbuff 0x7fc942a2c200 count 20000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount b sendbuff 0x7fc942a31200 recvbuff 0x7fc942a31200 count 80 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a31200 recvbuff 0x7f4817a31200 count 80 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a31400 recvbuff 0x7f4817a31400 count 64000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount c sendbuff 0x7fc942a31400 recvbuff 0x7fc942a31400 count 64000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a40e00 recvbuff 0x7f4817a40e00 count 200 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount d sendbuff 0x7fc942a40e00 recvbuff 0x7fc942a40e00 count 200 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a41000 recvbuff 0x7f4817a41000 count 2000 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount e sendbuff 0x7fc942a41000 recvbuff 0x7fc942a41000 count 2000 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4817a41800 recvbuff 0x7f4817a41800 count 40 datatype 0 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Broadcast: opCount f sendbuff 0x7fc942a41800 recvbuff 0x7fc942a41800 count 40 datatype 0 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50, 320])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
-[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50, 320])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
-[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Connected all trees
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_PROTO set by environment to SIMPLE
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO NCCL_ALGO set by environment to RING
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Connected all trees
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_PROTO set by environment to SIMPLE
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO NCCL_ALGO set by environment to RING
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO comm 0x7f94bc324470 rank 0 nranks 4 cudaDev 0 busId 18000 - Init COMPLETE
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO comm 0x7f383c319c70 rank 1 nranks 4 cudaDev 1 busId 3b000 - Init COMPLETE
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Connected all trees
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_PROTO set by environment to SIMPLE
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO NCCL_ALGO set by environment to RING
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Connected all trees
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_PROTO set by environment to SIMPLE
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO NCCL_ALGO set by environment to RING
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 8/8/512
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO 1 coll channels, 1 p2p channels, 1 p2p channels per peer
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO [CCP] Socekt.h: Set TCP cong to CCP.
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO comm 0x7f4c6031a040 rank 2 nranks 4 cudaDev 0 busId 18000 - Init COMPLETE
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f37baa00400 recvbuff 0x7f37baa00400 count 40 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO comm 0x7fb4803221a0 rank 3 nranks 4 cudaDev 1 busId 3b000 - Init COMPLETE
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a00400 recvbuff 0x7f9457a00400 count 40 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Launch mode Parallel
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f4c0da00400 recvbuff 0x7f4c0da00400 count 40 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a00400 recvbuff 0x7fb3f2a00400 count 40 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 1 sendbuff 0x7f4c0da00000 recvbuff 0x7f4c0da00000 count 1000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a00000 recvbuff 0x7fb3f2a00000 count 1000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a00000 recvbuff 0x7f9457a00000 count 1000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 1 sendbuff 0x7f37baa00000 recvbuff 0x7f37baa00000 count 1000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 2 sendbuff 0x7f37baa05600 recvbuff 0x7f37baa05600 count 80 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a05600 recvbuff 0x7f9457a05600 count 80 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 3 sendbuff 0x7f37baa00600 recvbuff 0x7f37baa00600 count 20000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 4 sendbuff 0x7f37baa15200 recvbuff 0x7f37baa15200 count 200 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a00600 recvbuff 0x7f9457a00600 count 20000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 5 sendbuff 0x7f37baa05800 recvbuff 0x7f37baa05800 count 64000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 6 sendbuff 0x7f37baa15c00 recvbuff 0x7f37baa15c00 count 40 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 2 sendbuff 0x7f4c0da05600 recvbuff 0x7f4c0da05600 count 80 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a15200 recvbuff 0x7f9457a15200 count 200 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 7 sendbuff 0x7f37baa15400 recvbuff 0x7f37baa15400 count 2000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a05800 recvbuff 0x7f9457a05800 count 64000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a05600 recvbuff 0x7fb3f2a05600 count 80 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a00600 recvbuff 0x7fb3f2a00600 count 20000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a15c00 recvbuff 0x7f9457a15c00 count 40 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a15200 recvbuff 0x7fb3f2a15200 count 200 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a15400 recvbuff 0x7f9457a15400 count 2000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 3 sendbuff 0x7f4c0da00600 recvbuff 0x7f4c0da00600 count 20000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 4 sendbuff 0x7f4c0da15200 recvbuff 0x7f4c0da15200 count 200 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 5 sendbuff 0x7f4c0da05800 recvbuff 0x7f4c0da05800 count 64000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a05800 recvbuff 0x7fb3f2a05800 count 64000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a15c00 recvbuff 0x7fb3f2a15c00 count 40 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 6 sendbuff 0x7f4c0da15c00 recvbuff 0x7f4c0da15c00 count 40 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a15400 recvbuff 0x7fb3f2a15400 count 2000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 7 sendbuff 0x7f4c0da15400 recvbuff 0x7f4c0da15400 count 2000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 8 sendbuff 0x7f37baa2bc00 recvbuff 0x7f37baa2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount 9 sendbuff 0x7f37baa2c000 recvbuff 0x7f37baa2c000 count 40 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a2bc00 recvbuff 0x7f9457a2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a2c000 recvbuff 0x7f9457a2c000 count 40 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount a sendbuff 0x7f37baa2c200 recvbuff 0x7f37baa2c200 count 20000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a2c200 recvbuff 0x7f9457a2c200 count 20000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount b sendbuff 0x7f37baa31200 recvbuff 0x7f37baa31200 count 80 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a31200 recvbuff 0x7f9457a31200 count 80 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount c sendbuff 0x7f37baa31400 recvbuff 0x7f37baa31400 count 64000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a31400 recvbuff 0x7f9457a31400 count 64000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 8 sendbuff 0x7f4c0da2bc00 recvbuff 0x7f4c0da2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount 9 sendbuff 0x7f4c0da2c000 recvbuff 0x7f4c0da2c000 count 40 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount d sendbuff 0x7f37baa40e00 recvbuff 0x7f37baa40e00 count 200 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a40e00 recvbuff 0x7f9457a40e00 count 200 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount e sendbuff 0x7f37baa41000 recvbuff 0x7f37baa41000 count 2000 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a41000 recvbuff 0x7f9457a41000 count 2000 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a2bc00 recvbuff 0x7fb3f2a2bc00 count 1000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a2c000 recvbuff 0x7fb3f2a2c000 count 40 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Broadcast: opCount 0 sendbuff 0x7f9457a41800 recvbuff 0x7f9457a41800 count 40 datatype 0 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Broadcast: opCount f sendbuff 0x7f37baa41800 recvbuff 0x7f37baa41800 count 40 datatype 0 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount a sendbuff 0x7f4c0da2c200 recvbuff 0x7f4c0da2c200 count 20000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a2c200 recvbuff 0x7fb3f2a2c200 count 20000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a31200 recvbuff 0x7fb3f2a31200 count 80 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount b sendbuff 0x7f4c0da31200 recvbuff 0x7f4c0da31200 count 80 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount c sendbuff 0x7f4c0da31400 recvbuff 0x7f4c0da31400 count 64000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount d sendbuff 0x7f4c0da40e00 recvbuff 0x7f4c0da40e00 count 200 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount e sendbuff 0x7f4c0da41000 recvbuff 0x7f4c0da41000 count 2000 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a31400 recvbuff 0x7fb3f2a31400 count 64000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a40e00 recvbuff 0x7fb3f2a40e00 count 200 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a41000 recvbuff 0x7fb3f2a41000 count 2000 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Broadcast: opCount f sendbuff 0x7f4c0da41800 recvbuff 0x7f4c0da41800 count 40 datatype 0 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Broadcast: opCount 0 sendbuff 0x7fb3f2a41800 recvbuff 0x7fb3f2a41800 count 40 datatype 0 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
@@ -241,6 +229,14 @@ SSH was successful into all the remote hosts.
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
 [1,1]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50, 320])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
+[1,0]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
@@ -249,79 +245,87 @@ SSH was successful into all the remote hosts.
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
 [1,3]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
-[1,2]<stdout>:===== begin one interation step
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 1, 5, 5])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20, 10, 5, 5])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([20])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50, 320])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([50])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10, 50])
+[1,2]<stdout>:<class 'torch.nn.parameter.Parameter'> torch.Size([10])
 [1,1]<stdout>:===== begin one interation step
+[1,3]<stdout>:===== begin one interation step
+[1,2]<stdout>:===== begin one interation step
 [1,0]<stdout>:===== begin one interation step
-[1,3]<stdout>:===== begin one interation step
-[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 512 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
 [1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 10 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 512 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 512 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 10 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 512 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 10 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 512 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
 [1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 1 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 16052 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 11 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 16052 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 11 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 16052 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 512 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
 [1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 1 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 16052 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 0 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 512 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 10 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 512 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
 [1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 12 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 5284 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 11 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 16072 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
 [1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 2 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 5284 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 12 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 5284 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 1 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 16072 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
 [1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 2 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 5284 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 1 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 16072 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 11 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 16072 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 12 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 5012 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 2 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 5012 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 12 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 5012 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 2 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 5012 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 13 sendbuff 0x7f37baa15e00 recvbuff 0x7f37baa15e00 count 250 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
+[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 3 sendbuff 0x7f9457a15e00 recvbuff 0x7f9457a15e00 count 250 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
+[1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 3 sendbuff 0x7fb3f2a15e00 recvbuff 0x7fb3f2a15e00 count 250 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 13 sendbuff 0x7f4c0da15e00 recvbuff 0x7f4c0da15e00 count 250 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
 [1,3]<stdout>:Train Epoch: 1 [0/15000 (0%)]	Loss: 2.354724
-[1,3]<stdout>:===== begin one interation step
 [1,2]<stdout>:Train Epoch: 1 [0/15000 (0%)]	Loss: 2.285889
+[1,3]<stdout>:===== begin one interation step
 [1,2]<stdout>:===== begin one interation step
 [1,1]<stdout>:Train Epoch: 1 [0/15000 (0%)]	Loss: 2.305933
-[1,0]<stdout>:Train Epoch: 1 [0/15000 (0%)]	Loss: 2.346126
 [1,1]<stdout>:===== begin one interation step
+[1,0]<stdout>:Train Epoch: 1 [0/15000 (0%)]	Loss: 2.346126
 [1,0]<stdout>:===== begin one interation step
 [1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 13 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 512 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 14 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 512 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
 [1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 3 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 512 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 13 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 512 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 4 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 512 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
 [1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 3 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 512 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 4 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 512 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 14 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 512 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
+[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 5 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 21072 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
 [1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 14 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 16072 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 4 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 16072 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 15 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 21072 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
 [1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 14 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 16072 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 15 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 21072 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
 [1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 4 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 16072 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 5 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 21072 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
+[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO AllReduce: opCount 6 sendbuff 0x7f9431400000 recvbuff 0x7f9431400000 count 264 datatype 7 op 0 root 0 comm 0x7f94bc324470 [nranks=4] stream 0x7f94bc24bd50
 [1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 15 sendbuff 0x7fcbc6a16400 recvbuff 0x7fcbc6a16400 count 5000 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 5 sendbuff 0x7f8fada16400 recvbuff 0x7f8fada16400 count 5000 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 5 sendbuff 0x7f4817a16400 recvbuff 0x7f4817a16400 count 5000 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO AllReduce: opCount 16 sendbuff 0x7f37c9000000 recvbuff 0x7f37c9000000 count 264 datatype 7 op 0 root 0 comm 0x7f383c319c70 [nranks=4] stream 0x7f383c243780
 [1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 15 sendbuff 0x7fc942a16400 recvbuff 0x7fc942a16400 count 5000 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
-[1,1]<stdout>:[all_reduce.cc] One tensor will be sent from rank 1 (ip:202.45.128.2331) to rank 2 (ip: 202.45.128.2331) with socket fd
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO AllReduce: opCount 16 sendbuff 0x7fcbd4600000 recvbuff 0x7fcbd4600000 count 264 datatype 7 op 0 root 0 comm 0x7fcc4c31a140 [nranks=4] stream 0x7fcc4c243d30
-[1,0]<stdout>:[all_reduce.cc] One tensor will be sent from rank 0 (ip:202.45.128.2320) to rank 1 (ip: 202.45.128.2320) with socket fd
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO AllReduce: opCount 6 sendbuff 0x7f8f87400000 recvbuff 0x7f8f87400000 count 264 datatype 7 op 0 root 0 comm 0x7f900c323d90 [nranks=4] stream 0x7f900c242fd0
-[1,2]<stdout>:[all_reduce.cc] One tensor will be sent from rank 2 (ip:202.45.128.2332) to rank 3 (ip: 202.45.128.2332) with socket fd
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO AllReduce: opCount 16 sendbuff 0x7fc964400000 recvbuff 0x7fc964400000 count 264 datatype 7 op 0 root 0 comm 0x7fc9d031a6d0 [nranks=4] stream 0x7fc9d0244180
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO AllReduce: opCount 16 sendbuff 0x7f4be6000000 recvbuff 0x7f4be6000000 count 264 datatype 7 op 0 root 0 comm 0x7f4c6031a040 [nranks=4] stream 0x7f4c60243970
 [1,3]<stdout>:[all_reduce.cc] One tensor will be sent from rank 3 (ip:202.45.128.2323) to rank 0 (ip: 202.45.128.2323) with socket fd
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO AllReduce: opCount 6 sendbuff 0x7f47ef400000 recvbuff 0x7f47ef400000 count 264 datatype 7 op 0 root 0 comm 0x7f4868322b40 [nranks=4] stream 0x7f486824c560
-[1,1]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.304141
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO AllReduce: opCount 6 sendbuff 0x7fb401000000 recvbuff 0x7fb401000000 count 264 datatype 7 op 0 root 0 comm 0x7fb4803221a0 [nranks=4] stream 0x7fb4802420e0
 [1,3]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.315045
-[1,0]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.327068
+[1,1]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.304141
 [1,2]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.313272
-[1,0]<stdout>:net-g12:58249:58265 [0] NCCL INFO Created 1 queue info, destroyed 1
-[1,2]<stdout>:net-g13:67807:67820 [0] NCCL INFO Created 1 queue info, destroyed 1
-[1,1]<stdout>:net-g12:58250:58264 [1] NCCL INFO Created 1 queue info, destroyed 1
-[1,3]<stdout>:net-g13:67808:67819 [1] NCCL INFO Created 1 queue info, destroyed 1
+[1,0]<stdout>:Train Epoch: 1 [64/15000 (0%)]	Loss: 2.327068
+[1,1]<stdout>:net-g12:26924:26942 [1] NCCL INFO Created 1 queue info, destroyed 1
+[1,0]<stdout>:net-g12:26923:26941 [0] NCCL INFO Created 1 queue info, destroyed 1
+[1,3]<stdout>:net-g13:35544:35559 [1] NCCL INFO Created 1 queue info, destroyed 1
+[1,2]<stdout>:net-g13:35543:35558 [0] NCCL INFO Created 1 queue info, destroyed 1
