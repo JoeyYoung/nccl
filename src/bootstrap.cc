@@ -15,9 +15,8 @@
 
 #include "mlcc.h"
 
-// char* nextRankIP;
-// char* myRankIP;
-int testRank;
+char* nextRankIP;
+char* myRankIP;
 
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
@@ -400,9 +399,16 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   printf("bootstrap %s\n", inet_ntoa(bootstrapNetIfAddr.sin.sin_addr));
 
   //ncclMLCC
+  char* myip = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
+  char* nextip = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
+
+  myRankIP = (char*)malloc(sizeof(char) * strlen(myip));
+  nextRankIP = (char*)malloc(sizeof(char) * strlen(nextip));
+  strcpy(myRankIP, myip);
+  strcpy(nextRankIP, nextip);
+
   // nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
   // myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
-  testRank = rank;
 
   return ncclSuccess;
 }
