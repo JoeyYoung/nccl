@@ -11,8 +11,7 @@ void checkRankIndex(ncclComm* comm){
   // we only use one channel for each connection
   int myRank = comm->channels[0].ring.index;
   int nextRank = comm->channels[0].ring.next;
-  printf("[all_reduce.cc] One tensor from rank %d %s\n", rankIPMap[myrank]);
-  printf("[all_reduce.cc] One tensor from rank %d %s\n", rankIPMap[nextrank]);
+  printf("this is rank %d\n", testRank);
   // printf("[all_reduce.cc] One tensor will be sent from rank %d (ip:%s) to rank %d (ip: %s) with socket fd\n", myRank, myRankIP, nextRank, nextRankIP);
 }
 

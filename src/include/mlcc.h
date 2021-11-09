@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <map>
 #include "socket.h"
 
 /*
@@ -13,4 +12,4 @@
 // // the socket id used for tensor transmission, need to obtain for proxy->netsocket?
 // extern int* fdSend;
 
-extern map<int, char*> rankIPMap;
+extern int testRank;

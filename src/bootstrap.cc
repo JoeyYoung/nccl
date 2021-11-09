@@ -17,7 +17,7 @@
 
 // char* nextRankIP;
 // char* myRankIP;
-map<int, char*> rankIPMap;
+int testRank;
 
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
@@ -402,7 +402,7 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   //ncclMLCC
   // nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
   // myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
-  rankIPMap[rank] = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
+  testRank = rank;
 
   return ncclSuccess;
 }
