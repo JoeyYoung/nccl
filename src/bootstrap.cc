@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 
+#include <stdlib.h>
 #include "mlcc.h"
 
 char* nextRankIP;
@@ -404,8 +405,15 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
 
   myRankIP = (char*)malloc(sizeof(char) * strlen(myip));
   nextRankIP = (char*)malloc(sizeof(char) * strlen(nextip));
+
   strcpy(myRankIP, myip);
   strcpy(nextRankIP, nextip);
+
+  char tail[5];
+  sprintf(tail, "%d", rank);
+  strcat(myRankIP, tail);
+  strcat(nextRankIP, tail);
+  printf("extern var: %s, %s\n", myRankIP, nextRankIP);
 
   // nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
   // myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
