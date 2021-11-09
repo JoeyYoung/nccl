@@ -12,10 +12,6 @@
 #include "socket.h"
 #include <unistd.h>
 #include <sys/types.h>
-#include "mlcc.h"
-
-char* nextRankIP;
-char* myRankIP;
 
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
@@ -392,15 +388,6 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   NCCLCHECK(bootstrapAllGather(state, state->peerAllocAddresses, sizeof(union socketAddress)));
 
   TRACE(NCCL_INIT, "rank %d nranks %d - DONE", rank, nranks);
-
-  // ncclMLCC, store ip of next rank and current rank 
-  struct sockaddr_in sin = state->extRingSendAddr.sin;
-  nextRankIP = inet_ntoa(sin.sin_addr);
-
-  struct sockaddr_in sin_ = bootstrapNetIfAddr.sin;
-  myRankIP = inet_ntoa(sin_.sin_addr);
-  // printf("IP address is: %s\n", inet_ntoa(sin.sin_addr));
-  // printf("remote port is: %d\n", (int) ntohs(sin.sin_port));
 
   return ncclSuccess;
 }

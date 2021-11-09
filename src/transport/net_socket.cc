@@ -16,6 +16,11 @@
 #include <limits.h>
 #include <fcntl.h>
 
+#include "mlcc.h"
+
+char* nextRankIP;
+char* myRankIP;
+
 /* Init functions */
 static int ncclNetIfs = -1;
 struct ncclSocketDev {
@@ -299,11 +304,15 @@ ncclResult_t ncclSocketListen(int dev, void* opaqueHandle, void** listenComm) {
   handle->nSocks = comm->nSocks;
   handle->nThreads = comm->nThreads;
   *listenComm = comm;
+
+  // ncclMLCC, store ip of my rank
+  myRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
+
   return ncclSuccess;
 }
 
 ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
-  printf("ncclSocketConnect\n");
+  printf("[net_socket.cc] ncclSocketConnect\n");
   if (dev < 0) { // data transfer socket is based on specified dev
     return ncclInternalError;
   }
@@ -322,8 +331,8 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
   *sendComm = comm;
   comm->addr = handle->connectAddr;
 
-  printf("New: The socket fd obtained in ncclSocketConnect is %d\n", comm->ctrlFd);
-  printf("The remote address obtained: %s\n", inet_ntoa(handle->connectAddr.sin.sin_addr));
+  // ncclMLCC, store ip of next rank
+  nextRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
 
   return ncclSuccess;
 }
