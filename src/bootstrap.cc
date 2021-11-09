@@ -393,11 +393,14 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   NCCLCHECK(bootstrapAllGather(state, state->peerAllocAddresses, sizeof(union socketAddress)));
 
   TRACE(NCCL_INIT, "rank %d nranks %d - DONE", rank, nranks);
-  printf("[bootstrap.cc: rank %d init done]", rank);
+  printf("[bootstrap.cc: rank %d init done]\n", rank);
+  printf("sendaddr %s\n", inet_ntoa(state->extRingSendAddr.sin.sin_addr));
+  printf("recvdaddr %s\n", inet_ntoa(state->extRingRecvAddr.sin.sin_addr));
+  printf("bootstrap %s\n", inet_ntoa(bootstrapNetIfAddr.sin.sin_addr));
 
   //ncclMLCC
-  nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr);
-  myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
+  nextRankIP = inet_ntoa(state->extRingSendAddr.sin.sin_addr); // wrong
+  myRankIP = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr); // right
 
   return ncclSuccess;
 }
