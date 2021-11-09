@@ -13,11 +13,11 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-#include <stdlib.h>
 #include "mlcc.h"
 
 char* nextRankIP;
 char* myRankIP;
+char* preRankIP;
 
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
@@ -393,13 +393,9 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   pthread_create(&state->allocThread, NULL, ncclRemoteMemAllocationService, state->allocState);
   NCCLCHECK(bootstrapAllGather(state, state->peerAllocAddresses, sizeof(union socketAddress)));
 
-  TRACE(NCCL_INIT, "rank %d nranks %d - DONE", rank, nranks);
-  printf("[bootstrap.cc: rank %d init done]\n", rank);
-  printf("sendaddr %s\n", inet_ntoa(state->extRingSendAddr.sin.sin_addr));
-  printf("recvdaddr %s\n", inet_ntoa(state->extRingRecvAddr.sin.sin_addr));
-  printf("bootstrap %s\n", inet_ntoa(bootstrapNetIfAddr.sin.sin_addr));
+  INFO(NCCL_INIT, "[bootstrap.cc] rank %d nranks %d - DONE", rank, nranks);
 
-  //ncclMLCC
+  //ncclMLCC, inet_ntoa() will use the same buffer to store char*, do for each ip
   char* myip = inet_ntoa(bootstrapNetIfAddr.sin.sin_addr);
   myRankIP = (char*)malloc(sizeof(char) * strlen(myip));
   strcpy(myRankIP, myip);
@@ -408,7 +404,9 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   nextRankIP = (char*)malloc(sizeof(char) * strlen(nextip));
   strcpy(nextRankIP, nextip);
 
-  printf("extern var: %s, %s\n", myRankIP, nextRankIP);
+  char* preip = inet_ntoa(state->extRingRecvAddr.sin.sin_addr);
+  preRankIP = (char*)malloc(sizeof(char) * strlen(preip));
+  strcpy(preRankIP, preip);
 
   return ncclSuccess;
 }

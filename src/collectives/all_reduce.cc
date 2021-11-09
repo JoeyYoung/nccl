@@ -7,10 +7,13 @@
 #include "enqueue.h"
 #include "mlcc.h"
 
+
+// todo, send to ccp ? or control in connectAddress, for local flow without setting ccp (not init problem)
 void checkRankIndex(ncclComm* comm){
   // we only use one channel for each connection
   int myRank = comm->channels[0].ring.index;
   int nextRank = comm->channels[0].ring.next;
+  int preRank = comm->channels[0].ring.prev;
   printf("[all_reduce.cc] One tensor will be sent from rank %d (ip:%s) to rank %d (ip: %s) with socket fd\n", myRank, myRankIP, nextRank, nextRankIP);
 }
 

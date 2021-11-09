@@ -304,6 +304,7 @@ ncclResult_t ncclSocketListen(int dev, void* opaqueHandle, void** listenComm) {
 }
 
 ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
+  // will be triggerd when indicate network interface before training
   printf("[net_socket.cc] ncclSocketConnect\n");
   if (dev < 0) { // data transfer socket is based on specified dev
     return ncclInternalError;
@@ -322,9 +323,6 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
   }
   *sendComm = comm;
   comm->addr = handle->connectAddr;
-
-  // ncclMLCC, store ip of next rank
-  // nextRankIP = inet_ntoa(handle->connectAddr.sin.sin_addr);
 
   return ncclSuccess;
 }

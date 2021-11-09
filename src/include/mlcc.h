@@ -8,6 +8,7 @@
 // ip of current rank and next rank, obtained from bootstrap
 extern char* myRankIP; 
 extern char* nextRankIP;
+extern char* preRankIP;
 
 // the socket id used for tensor transmission, need to obtain for proxy->netsocket?
 extern int* fdSend;
