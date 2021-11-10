@@ -320,6 +320,7 @@ ncclResult_t ncclSocketConnect(int dev, void* opaqueHandle, void** sendComm) {
     NCCLCHECK(socketWait(NCCL_SOCKET_SEND, tmpFd, &handle->connectAddr, &i, sizeof(int), &offset));
     if (i == comm->nSocks) comm->ctrlFd = tmpFd;
     else comm->fds[i] = tmpFd;
+    printf("[net_socket.cc] tmpFd: %d\n", tmpFd);
   }
   *sendComm = comm;
   comm->addr = handle->connectAddr;
