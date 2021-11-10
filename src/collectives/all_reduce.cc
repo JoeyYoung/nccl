@@ -6,21 +6,22 @@
 
 #include "enqueue.h"
 #include "mlcc.h"
-
+#include "debug.h"
 
 /*
-todo,
-now socket number correct, keep tracking, if fail just ignore socket id?
-  (1) we check only send socket with ccp option, will be recorded in ccp agent.
-  (2) send to ccp ? or control in connectAddress, for local flow without setting ccp (not init problem)
+fail just ignore socket id?
+  (1) only cross machine will open shared memory
+  (2) ccp always use the last socket flow as the reduce transmission.
 */
 
-void checkRankIndex(ncclComm* comm){
+bool isCrossMachine(ncclComm* comm){
   // we only use one channel for each connection
   int myRank = comm->channels[0].ring.index;
   int nextRank = comm->channels[0].ring.next;
   int preRank = comm->channels[0].ring.prev;
-  printf("[all_reduce.cc] One tensor will be sent from rank %d (ip:%s) to rank %d (ip: %s)\n", myRank, myRankIP, nextRank, nextRankIP);
+  INFO(NCCL_NET, "[all_reduce.cc] Process data: from rank %d (ip:%s) to peer rank %d (ip: %s)", myRank, myRankIP, nextRank, nextRankIP);
+  if (strcmp(myRankIP, nextRankIP) != 0) return true;
+  else return false;
 }
 
 NCCL_API(ncclResult_t, ncclAllReduce, const void* sendbuff, void* recvbuff, size_t count,
@@ -43,9 +44,12 @@ ncclResult_t ncclAllReduce(const void* sendbuff, void* recvbuff, size_t count,
         continue ...
   */
 
-  // Judge whether this transmission cross machines
-  // Make it Asyn, since only ncclSocketConnect not called at very first
-  checkRankIndex(comm);
+  // Judge whether this transmission cross machines, asyn?
+  if(isCrossMachine(comm)){
+    //todo, open shared memory to signal status
+    printf("[all_reduce.cc] Open shared ....\n");
+  }
+  // do nothing if its intra node peer
 
   return ncclEnqueueCheck(&info);
 }
