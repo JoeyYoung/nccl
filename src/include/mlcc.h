@@ -12,3 +12,10 @@ extern char* preRankIP;
 
 // the socket id used for tensor transmission, need to obtain for proxy->netsocket?
 extern int* fdSend;
+
+struct modelSize{
+    size_t G;
+    size_t M;
+    size_t B;    
+};
+extern struct modelSize accumlSize;
