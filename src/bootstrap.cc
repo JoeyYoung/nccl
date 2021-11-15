@@ -18,6 +18,7 @@
 char* nextRankIP;
 char* myRankIP;
 char* preRankIP;
+int shmKey;
 
 /* Init functions */
 static char bootstrapNetIfName[MAX_IF_NAME_SIZE+1];
@@ -408,6 +409,29 @@ ncclResult_t bootstrapInit(ncclUniqueId * id, int rank, int nranks, void** commS
   preRankIP = (char*)malloc(sizeof(char) * strlen(preip));
   strcpy(preRankIP, preip);
 
+  int srcKey, dstKey;
+  char* token;
+  char* temp;
+  temp = (char*)malloc(sizeof(char) * strlen(myRankIP));
+
+  strcpy(temp, myRankIP);
+  token = strtok(temp, ".");
+  srcKey = atoi(token);
+  while(token != NULL){
+    srcKey = atoi(token);
+    token = strtok(NULL, ".");
+  }
+
+  strcpy(temp, nextRankIP);
+  token = strtok(temp, ".");
+  dstKey = atoi(token);
+  while(token != NULL){
+    dstKey = atoi(token);
+    token = strtok(NULL, ".");
+  }
+
+  shmKey = srcKey * dstKey;
+  INFO(NCCL_INIT, "Generate shared memory key: %d", shmKey);
   return ncclSuccess;
 }
 

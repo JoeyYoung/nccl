@@ -9,7 +9,9 @@
 #include "debug.h"
 #include "core.h"
 
+// the transmitted data in one iteration is very deterministic
 struct modelSize accumlSize;
+bool shmInit;
 
 /*
 fail just ignore socket id?
@@ -51,12 +53,36 @@ ncclResult_t ncclAllReduce(const void* sendbuff, void* recvbuff, size_t count,
     sendbuff, recvbuff, count, datatype, op, 0, comm, stream, /* Args */
     ALLREDUCE_CHUNKSTEPS, ALLREDUCE_SLICESTEPS };
 
-  // ncclMLCC, Judge whether this transmission cross machines
+  // Judge whether this transmission cross machines
   if(isCrossMachine(comm)){
     // accumulate total data size transmitted
     accumulateTensorSize(datatype, count);
-    //todo, open shared memory, store
-    printf("[all_reduce.cc] Open shared ....\n");
+    // open shared memory, store based on shmKey (consider asyn? seems is efficiency enough)
+    int shmID;
+    if(!shmInit){
+      shmID = shmget(shmKey, sizeof(struct modelSize), IPC_CREAT | 0666);
+      shmctl(shmID, IPC_RMID, 0);
+      shmInit = true;
+    }
+    shmID = shmget(shmKey, sizeof(struct modelSize), IPC_CREAT | 0666); // open shared memory
+    if (shmID < 0) {
+        // for case of error does not return a valid shmid
+        int err = errno;
+        printf("Error getting shared memory id %d %d\n", shmID, err);
+        exit(EXIT_FAILURE);
+    }
+    INFO(NCCL_NET, "[all_reduce.cc] Open shared id: %d, shmkey: %d....", shmID, shmKey);
+    struct modelSize* shmPtr;
+    shmPtr = (struct modelSize *)shmat(shmID, NULL, 0); // attach memory
+    shmPtr->G = accumlSize.G;
+    shmPtr->M = accumlSize.M;
+    shmPtr->B = accumlSize.B; // write accumulative size into memory
+    
+    // detech the ptr, wont delete the shared memory
+    if (shmdt(shmPtr) == -1){
+        printf("shmdt failed\n");
+        exit(EXIT_FAILURE);
+    }
   }
   // do nothing if its intra node peer
 

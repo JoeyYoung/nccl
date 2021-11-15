@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "socket.h"
+#include <sys/shm.h>
 
 /*
     Store ip, socket id info, help rank proc to judge and feed to ccp
@@ -19,3 +21,8 @@ struct modelSize{
     size_t B;    
 };
 extern struct modelSize accumlSize;
+
+// we use src_ip[laster region] * dst_ip[laster region] as the shmKey
+extern int shmKey;
+// if not init, delete existing shared memory
+extern bool shmInit;
