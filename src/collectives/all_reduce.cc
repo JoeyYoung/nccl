@@ -23,13 +23,14 @@ bool isCrossMachine(ncclComm* comm){
   else return false;
 }
 
+// Note that M=1024*1024B
 void accumulateTensorSize(ncclDataType_t datatype, size_t count){
   size_t dataSize = (size_t) ncclTypeSize(datatype) * count; // represented as bytes
   accumlSize.B += dataSize;
   // tune accumlSize to fit
-  if(accumlSize.B >= 1024){
-    accumlSize.M += (accumlSize.B/1024);
-    accumlSize.B %= 1024;
+  if(accumlSize.B >= (1024*1024)){
+    accumlSize.M += (accumlSize.B/(1024*1024));
+    accumlSize.B %= (1024*1024);
   }
   if(accumlSize.M >= 1024){
     accumlSize.G += (accumlSize.M/1024);
