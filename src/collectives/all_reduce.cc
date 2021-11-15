@@ -13,12 +13,6 @@
 struct modelSize accumlSize;
 bool shmInit;
 
-/*
-fail just ignore socket id?
-  (1) only cross machine will open shared memory
-  (2) ccp always use the last socket flow as the reduce transmission.
-*/
-
 bool isCrossMachine(ncclComm* comm){
   // we only use one channel for each connection
   int myRank = comm->channels[0].ring.index;
