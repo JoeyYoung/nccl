@@ -384,7 +384,6 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
   }
 
   // ncclMLCC, set congestion control algorithm on socket
-  printf("[socket.h] connectAddress(), the connect socket id created: %d\n", *fd);
   char buf[256];
   socklen_t len;
   len = sizeof(buf);
