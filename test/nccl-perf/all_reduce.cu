@@ -79,18 +79,18 @@ int main(int argc, char *argv[]) {
             break;
         }
         if (hostHashs[p] == hostHashs[myRank]) {
-            localRank++;
+            localRank++;    // get local rank index
         }
     }
 
     ncclUniqueId id;
     ncclComm_t comm;
     float *sendbuff, *recvbuff;
-    cudaStream_t s;
+    cudaStream_t s;     // one steam can executed multipel kernels by order, but streams are async
 
     // get NCCL unique ID at rank 0 and broadcast it to all others
     if (myRank == 0) {
-        ncclGetUniqueId(&id);
+        ncclGetUniqueId(&id);   // ncclInit: initEnv() initNet()
     }
     MPICHECK(MPI_Bcast((void *) &id, sizeof(id), MPI_BYTE, 0,
                        MPI_COMM_WORLD));
@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) {
     CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
     CUDACHECK(cudaStreamCreate(&s));
 
-    // initializing NCCL
+    // initializing NCCL, called by each process, key parts before communication
     NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
 
     // communicating using NCCL

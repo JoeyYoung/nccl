@@ -270,10 +270,11 @@ static ncclResult_t commAlloc(ncclComm_t* comret, int ndev, int rank) {
   struct ncclComm* comm;
   NCCLCHECK(ncclCalloc(&comm, 1));
 
+  // host copy of communicator
   comm->rank = comm->hostDevComm.rank = rank;
   comm->nRanks = comm->hostDevComm.nRanks = ndev;
   cudaGetDevice(&comm->cudaDev);
-  NCCLCHECK(getBusId(comm->cudaDev, &comm->busId));
+  NCCLCHECK(getBusId(comm->cudaDev, &comm->busId)); // PCI bus ID
   TRACE(NCCL_INIT,"comm %p rank %d nranks %d cudaDev %d busId %lx", comm, rank, ndev, comm->cudaDev, comm->busId);
 
   comm->doneEvent = doneEvent;
@@ -299,7 +300,7 @@ static ncclResult_t commAlloc(ncclComm_t* comret, int ndev, int rank) {
   comm->asyncTotalSize = 0;
   comm->channelSize = ncclParamAggChannelSize();
   comm->asyncAllocMode = ncclComm::SHORTEST_QUEUE;
-  char* str = getenv("NCCL_AGG_ALLOC_MODE");
+  char* str = getenv("NCCL_AGG_ALLOC_MODE"); // seems not find this environment variable, discard?
   if (str) INFO(NCCL_ENV, "NCCL_AGG_ALLOC_MODE set by environment to %s", str);
   if (str && strcmp(str, "ROUND_ROBIN") == 0) {
     comm->asyncAllocMode = ncclComm::ROUND_ROBIN;
@@ -307,7 +308,7 @@ static ncclResult_t commAlloc(ncclComm_t* comret, int ndev, int rank) {
 
   CUDACHECK(cudaDriverGetVersion(&comm->driverVersion));
 
-  NCCLCHECK(ncclCreateQueueInfo(&comm->enqueueInfo, comm));
+  NCCLCHECK(ncclCreateQueueInfo(&comm->enqueueInfo, comm)); // nccl 手动维护的类似stream的队列，压入一系列ops
   comm->lastSetupNode = NULL;
   comm->lastCudaGraphId = -1;
   comm->disableGraphHelper = ncclParamDisableGraphHelper();
@@ -931,13 +932,13 @@ ncclResult_t ncclCommInitRankSync(ncclComm_t* newcomm, int nranks, ncclUniqueId 
   ncclResult_t res;
 
   CUDACHECK(cudaSetDevice(cudaDev));
-  // Set the maximum kernel stack size of all kernels to avoid
+  // Set the maximum kernel stack size of all kernels  to avoid
   // a CUDA memory reconfig on load (c.f. NVSHMEM issue)
   if (maxLocalSizeBytes > 0 && ncclParamSetStackSize() == 1) {
     TRACE(NCCL_INIT, "Setting cudaLimitStackSize to %zi", maxLocalSizeBytes);
     CUDACHECKIGNORE(cudaDeviceSetLimit(cudaLimitStackSize, maxLocalSizeBytes));
   }
-  NCCLCHECKGOTO(commAlloc(newcomm, nranks, myrank), res, cleanup);
+  NCCLCHECKGOTO(commAlloc(newcomm, nranks, myrank), res, cleanup); // init communicator
   NCCLCHECKGOTO(initTransportsRank(*newcomm, &commId), res, cleanup);
   NCCLCHECKGOTO(devCommSetup(*newcomm), res, cleanup);
 
@@ -972,6 +973,7 @@ static ncclResult_t ncclCommInitRankDev(ncclComm_t* newcomm, int nranks, ncclUni
   }
 
   if (ncclAsyncMode()) {
+    // 调用了 ncclAsyncInit 来完成最后初始化，传入了总体rank数目，进程自身的myrank
     NCCLCHECKGOTO(ncclAsyncInit(ncclCommInitRankSync, newcomm, nranks, commId, myrank, cudaDev), res, end);
   } else {
     NCCLCHECKGOTO(ncclCommInitRankSync(newcomm, nranks, commId, myrank, cudaDev), res, end);
@@ -982,6 +984,7 @@ end:
   else return res;
 }
 
+// Kind of GNC defination for api. __attribute__((visibility("default"))), visibale for .so
 NCCL_API(ncclResult_t, ncclCommInitRank, ncclComm_t* newcomm, int nranks, ncclUniqueId commId, int myrank);
 ncclResult_t ncclCommInitRank(ncclComm_t* newcomm, int nranks, ncclUniqueId commId, int myrank) {
   NVTX3_FUNC_RANGE_IN(nccl_domain);
