@@ -392,14 +392,14 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
     return ncclSystemError;
   }
 
-  strcpy(buf, "ccp");
-  len = strlen(buf);
-  if (setsockopt(*fd, IPPROTO_TCP, TCP_CONGESTION, buf, len) != 0){
-    WARN("[socket.h] CCP: Set TCP CONGESTION failed");
-    return ncclSystemError;
-  }else{
-    INFO(NCCL_INIT, "[socket.h] CCP: Set TCP cong to CCP.");
-  }
+  // strcpy(buf, "ccp");
+  // len = strlen(buf);
+  // if (setsockopt(*fd, IPPROTO_TCP, TCP_CONGESTION, buf, len) != 0){
+  //   WARN("[socket.h] CCP: Set TCP CONGESTION failed");
+  //   return ncclSystemError;
+  // }else{
+  //   INFO(NCCL_INIT, "[socket.h] CCP: Set TCP cong to CCP.");
+  // }
 
   const int one = 1;
   SYSCHECK(setsockopt(*fd, IPPROTO_TCP, TCP_NODELAY, (char*)&one, sizeof(int)), "setsockopt");
